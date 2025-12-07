@@ -1,0 +1,241 @@
+/* --- Reset & base --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { font-family: Arial, Helvetica, sans-serif; background:#fff; color:#111; }
+.Container{
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 12px;
+    width: 100%;
+}
+
+/* --- NAVBAR --- */
+.Navbar{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px;
+    background-color: rgb(154,192,196);
+    border-radius:8px;
+    position:relative;
+}
+
+.logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:32px;
+    font-weight:700;
+    padding:6px 12px;
+    flex: 0 0 auto;
+}
+
+/* search area grows */
+.searchBox{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex: 1 1 auto;
+    min-width: 0; /* allow overflow handling for inputs */
+    background: #fff;
+    border-radius:6px;
+    padding:6px;
+    border:1px solid rgba(0,0,0,0.08);
+    align-items:center;
+}
+
+/* small elements inside search */
+.locationlogo{
+    min-width:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:red;
+    font-size:18px;
+}
+
+.locationInput{
+    width: 90px;
+    border: none;
+    outline:none;
+    font-size:14px;
+    min-width:60px;
+}
+
+.seperator{
+    padding:0 6px;
+    color:#c23;
+    font-weight:700;
+}
+
+.SearchLogo{
+    min-width:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.SearchBoxInput{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.SearchBoxInput input{
+    width:100%;
+    border: none;
+    outline:none;
+    font-size:14px;
+    padding:6px 4px;
+}
+
+/* login/signup */
+.LogINandSignUpContainer{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:flex-end;
+    flex: 0 0 auto;
+}
+.LogIN, .SignUP{
+    padding:6px 12px;
+    cursor:pointer;
+    border-radius:6px;
+}
+.LogIN:hover, .SignUP:hover{ color: red; background: rgba(0,0,0,0.05); }
+
+/* hamburger for mobile */
+.hamburger{
+    display:none;
+    background: none;
+    border: none;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* --- TYPE OF ORDER --- */
+.TypeofOrder{
+    display:flex;
+    gap:12px;
+    margin:12px 0;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.typeOfOrderOptions{
+    padding:10px 18px;
+    border-radius:8px;
+    background: #e5eaeb;
+    cursor:pointer;
+    border:none;
+}
+.typeOfOrderOptions:hover{ background: #fff; }
+
+/* --- CARDS / DISH GRID --- */
+.SomeFamousDishes{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap:16px;
+    margin: 8px 0 20px 0;
+    width:100%;
+}
+
+/* each card */
+.cards{
+    background: #fff;
+    border: 2px solid rgba(85,212,228,0.7);
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition: transform .15s ease, border-color .15s ease;
+    height: 100%;
+}
+.cards:hover{ transform: translateY(-6px); border-color: rgb(3,32,129); }
+
+/* image responsive */
+.fooditempics{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    display:block;
+}
+
+/* content inside card */
+.AboutDishContainer{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding:10px;
+    flex:1 1 auto;
+}
+
+.FirstRowAboutdish, .SecondRowAboutDish, .ThirdRowAboutDish{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+}
+.NameOfDish{ font-weight:700; }
+.Rating{ color:green; font-size:14px; }
+
+/* --- FOOTER --- */
+.Footer{
+    background-color: rgb(154,192,196);
+    border-radius:8px;
+    padding:18px;
+    margin-top:18px;
+}
+.FooterFirstRow{
+    display:flex;
+    align-items:center;
+    margin-bottom:8px;
+}
+.Footer2ndcontent{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap:14px;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+.classbold{ font-weight:700; }
+.SocialLinks i{ margin-right:8px; }
+
+/* Below footer small text */
+.BelowFooter{
+    border-top:1px solid rgba(0,0,0,0.15);
+    margin-top:12px;
+    padding-top:12px;
+    font-size:13px;
+    text-align:center;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+    .logo { font-size:28px; }
+    .fooditempics { height:160px; }
+}
+
+@media (max-width: 700px) {
+    .Navbar{ flex-wrap:wrap; align-items:flex-start; gap:8px; padding:8px; }
+    .hamburger{ display:block; margin-left:auto; }
+    .LogINandSignUpContainer{ display:none; } /* hidden on small screens, appear when .open via JS */
+    .searchBox{ order:2; width:100%; }
+    .locationInput{ display:inline-block; }
+    .SearchBoxInput input{ font-size:15px; padding:8px; }
+    .TypeofOrder{ gap:8px; }
+    .fooditempics{ height:150px; }
+}
+
+/* when hamburger toggles 'open' class (JS adds it) */
+.searchBox.open{ display:flex; }
+.LogINandSignUpContainer.open{ display:flex; }
+
+/* make inputs more touch-friendly */
+input[type="text"], button{
+    touch-action: manipulation;
+}
+
+/* small polish */ 
+@media (max-width:420px) {
+    .NameOfDish{ font-size:15px; }
+    .Rating{ font-size:13px; }
+    .Footer2ndcontent{ grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
+    .fooditempics{ height:130px; }
+}
