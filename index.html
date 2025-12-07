@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zomato My version</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/4f98ad3a21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="Container">
+        <header class="Navbar">
+            <div class="logo">zomato</div>
+
+            <div class="searchBox">
+                <div class="locationlogo">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <input class="locationInput" type="text" placeholder="Varanasi" />
+
+                <div class="seperator">|</div>
+
+                <div class="SearchLogo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="SearchBoxInput">
+                    <input type="text" placeholder="Search for restaurant, cuisine or a dish" />
+                </div>
+            </div>
+
+            <div class="LogINandSignUpContainer">
+                <span class="LogIN">Log in</span>
+                <span class="SignUP">Sign up</span>
+            </div>
+
+            <button class="hamburger" aria-label="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <nav class="TypeofOrder">
+            <button class="Delivery typeOfOrderOptions">Delivery</button>
+            <button class="TakeAway typeOfOrderOptions">Take Away</button>
+            <button class="DineIn typeOfOrderOptions">Dine In</button>
+        </nav>
+
+        <main class="SomeFamousDishes">
+            <!-- Card template repeated -->
+            <article class="cards Card1Container">
+                <img src="ChowminPic.avif" alt="Chowmin" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Chowmin</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>Chinese</i></div>
+                        <div class="price"><i>Rs 170</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Pari Chowk, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">3 km</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards Card2Container">
+                <img src="ManchurianPic.avif" alt="Manchurian" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Manchurian</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>Chinese</i></div>
+                        <div class="price"><i>Rs 240</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Pari Chowk, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">3 km</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards Card3Container">
+                <img src="DoshaPic.avif" alt="Dosha" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Dosha</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>South Indian</i></div>
+                        <div class="price"><i>Rs 110</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Jagat Farm, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">1.5 km</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards Card4Container">
+                <img src="IdliPic.avif" alt="Idli" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Idli</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>South Indian</i></div>
+                        <div class="price"><i>Rs 70</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Jagat Farm, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">1.5 km</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards Card5Container">
+                <img src="KadhaiPaneerPic.avif" alt="Kadhai Paneer" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Kadhai Paneer</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>Punjabi</i></div>
+                        <div class="price"><i>Rs 250</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Pari Chowk, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">3 km</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards Card6Container">
+                <img src="chillipaneerPic.avif" alt="Chilli Paneer" class="fooditempics" />
+                <div class="AboutDishContainer">
+                    <div class="FirstRowAboutdish">
+                        <div class="NameOfDish">Chilli paneer</div>
+                        <div class="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="SecondRowAboutDish">
+                        <div class="CusineOfDish"><i>Punjabi</i></div>
+                        <div class="price"><i>Rs 240</i></div>
+                    </div>
+
+                    <div class="ThirdRowAboutDish">
+                        <div class="locationOfRestaurant">Pari Chowk, G.Noida</div>
+                        <div class="DistanceOfRestaurantFromYourLoc">3 km</div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="Footer">
+            <div class="FooterFirstRow">
+                <div class="logo">zomato</div>
+            </div>
+
+            <div class="Footer2ndcontent">
+                <div class="content1">
+                    <div class="AboutZomato classbold">About Zomato</div>
+                    <div>Who we are</div>
+                    <div>Blog</div>
+                    <div>Work With Us</div>
+                    <div>Investor Relations</div>
+                    <div>Report Fraud</div>
+                    <div>Press Kit</div>
+                    <div>Contact Us</div>
+                </div>
+                
+                <div class="content2">
+                    <div class="Zomaverse classbold">Zomaverse</div>
+                    <div>Zomato</div>
+                    <div>Blinkit</div>
+                    <div>District</div>
+                    <div>Feeding India</div>
+                    <div>Hyperpure</div>
+                    <div>Zomato Live</div>
+                    <div>Zomaland</div>
+                    <div>Weather Union</div>
+                </div>
+
+                <div class="content3">
+                    <div class="ForRestaurants classbold">For Restaurants</div>
+                    <div>Partner With Us</div>
+                    <div>Apps For You</div>
+                </div>
+
+                <div class="content4">
+                    <div class="LearnMore classbold">Learn More</div>
+                    <div>Privacy</div>
+                    <div>Security</div>
+                    <div>Terms</div>
+                </div>
+
+                <div class="content5">
+                    <div class="SocialLinks">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="BelowFooter">
+                <div>
+                    By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2025 © Zomato™ Ltd. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Small JS to toggle mobile menu/search (optional)
+        const ham = document.querySelector('.hamburger');
+        const search = document.querySelector('.searchBox');
+        const login = document.querySelector('.LogINandSignUpContainer');
+
+        ham?.addEventListener('click', () => {
+            // toggle a "open" class for mobile layout
+            search.classList.toggle('open');
+            login.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
